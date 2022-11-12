@@ -1,0 +1,334 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,400;1,500&display=swap');
+     :root{
+         --transition:all 300ms ease-in-out ;
+         --dark-color:#332e23;
+         --light-color:#fff;
+     }
+     *{
+         box-sizing: border-box;
+         padding: 0;
+         margin: 0;
+         outline: 0;
+     }
+     html{
+         font-size: 10px;
+         scroll-behavior: smooth;
+     }
+     body{
+         font-size: 1.6rem;
+         font-family: 'Poppins', sans-serif;
+         line-height: 1.6;
+     }
+     button, .btn{
+         cursor: pointer; 
+         border: none;
+         background: transparent;
+     }
+     ul{
+         list-style-type: none;
+     }
+     a{
+         text-decoration: none;
+         color: var(--dark-color);
+     }
+     img{
+         width: 100%;
+         display: block;
+     }
+     .container{
+         max-width: 800px;
+         margin: 0 auto;
+         padding: 0 2rem;
+     }
+     .vh-100{
+         min-height: 100vh;
+     }
+     h1, h2, h3{
+         margin-top: 0;
+         line-height: 1.3;
+         margin-bottom: 1.8rem;
+         color: var(--dark-color);
+     }
+     .flex{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .py-7{
+         padding: 7rem 0rem;
+     }
+     .grid{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         gap:1rem;
+     }
+     .lead{
+         opacity: 0.8;
+         padding: 1rem 0;
+         font-size: 1.7rem;
+         font-weight: 300;
+         line-height: 1.8;
+     }
+
+     #header{
+         background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.1))fixed;
+         background: url('ph2.jpg') center/cover no-repeat fixed;
+         justify-content: flex-start;
+         align-items: flex-end;
+     }
+     #header .container{
+         width: 100%;
+     }
+     .header-container{
+         padding-bottom: 4rem;
+     }
+     .header-content h1{
+         font-size: 4.5rem;
+         margin-bottom: 0;
+         text-transform: uppercase;
+         color: var(--light-color);
+     }
+     .header-content h3{
+        color: var(--light-color);
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+     }
+     .social-links{
+         display: flex;
+         margin-top: 3.5rem;
+     }
+     .social-links li a{
+         width: 40px;
+         height: 40px;
+         background-color: var(--light-color);
+         margin-right: 1rem;
+         border-radius: .3rem;
+         box-shadow: 0 0 6px 5px rgba(0,0,0,0.2);
+         transition: var(--transition);
+     }
+     .social-links li a:hover{
+        opacity:0.9;
+     }
+
+     .about-left{
+         margin-bottom: 4rem;
+         height: 1200px;
+         overflow: hidden;
+     }
+
+     .btn-down{
+         font-size: 3rem;
+         display: inline-block;
+         margin-top: 1rem;
+         transition: var(--transition);
+     }
+     .btn-down:hover{
+         opacity: 0.8;
+         transform: translateY(5px);
+     }
+     .btn-down-white{
+         color: var(--light-color);
+     }
+     .title{
+         margin-bottom: 5rem;
+     }
+     .title h2{
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-weight: 600;
+         position: relative;
+     }
+     .title h2::after{
+         position: absolute;
+         content: "";
+         top: 120%;
+         left: 0;
+         width: 70px;
+         height: 4px;
+         background-color: var(--dark-color);
+     }
+     #work{
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.1))fixed;
+         background: url('ph8.jpg') center/cover no-repeat fixed;
+         color:var(--dark-color);
+     }
+     #work .title h2 #work h3{
+         color: var(--dark-color);
+     }
+     #work .title h2::after{
+         background: var(--dark-color);
+     }
+     .work-bottom-grid{
+         margin-top: 10rem;
+         text-align: center;
+     }
+     .work-bottom-grid > div .icon img{
+         width: 50px;
+         margin: 0 auto 1.7rem auto;
+     }
+
+    @media(min-width: 450){
+        .work-bottom-grid{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+            row-gap: 0;
+        }
+    }
+     @media(min-width: 576){
+         .title h2{
+             font-size: 4rem;
+         }
+         .work-bottom-grid{
+             grid-template-columns: repeat(4, 1fr);
+         }
+     }
+     @media(min-width: 768px){
+         .header-content h1{
+             font-size: 7rem;
+         }
+         .about-content{
+             grid-template-columns: repeat(2, 1fr);
+             column-gap: 6rem;
+             row-gap: 0;
+         }
+         .about-left{
+             margin-bottom: 0;
+         }
+     }
+
+    
+    </style>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Comptible" content="iE-edge">
+    <meta name="viexport" content="width-device-width,initial-scale=1.0">
+    <title>I'm a Photographer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+    <header id="header" class="vh-100 files">
+        <div class="container">
+            <div class="header-content">
+                <h1>I'm a<br><span class="typewrite" data-loop="yes" data-speed="100" 
+                    data-delay="2000" data-words='["Photographer","Videographer","video editor"]'></span></h1>
+                <h3>Baraa Alshiekh</h3>
+                <ul class="social-links">
+                    <li>
+                        <a herf="f" class="flex">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a herf="f" class="flex">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a herf="f" class="flex">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a herf="f" class="flex">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about py-7">
+            <div class="container">
+                <div class="about-content grid">
+                    <div class="about-left">
+                        <img src='ph3.jpg'>
+                    </div>
+                    <div class="about-right">
+                        <div class="title">
+                            <h2>About Me</h2>
+                        </div>
+                        <p class="lead">Professional photographer Baraa Alshiekh combines her photography passion with her 
+                            photography degree to find the right balance between creativity and commercial since baraa is an 
+                            experienced all round photographer. 
+                        </p>
+                        <p>We can checkout her recent works and experiences below. </p>
+                        <a href="work" class="btn-down">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="work" class="vh-100 flex">
+            <div class="container">
+                <div class="work-content">
+                    <div class="title">
+                        <h2>WHAT AM I DOING?</h2>
+                        <div class="work-bottom-grid">
+                            <div>
+                                <span class="icon">
+                                    <img src="ph4.png">
+                                </span>
+                                <h3>Wildlife</h3>
+                            </div> 
+                            <div>
+                                <span class="icon">
+                                    <img src="ph5.png">
+                                </span>
+                                <h3>Portrait</h3>
+                            </div> 
+                            <div>
+                                <span class="icon">
+                                    <img src="ph6.png">
+                                </span>
+                                <h3>landscape</h3>
+                            </div> 
+                            <div>
+                                <span class="icon">
+                                    <img src="ph7.png">
+                                </span>
+                                <h3>family</h3>
+                            </div> 
+                        </div>
+                        <a href="#protofolio" class="btn-down btn-down-white">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="vh=100">
+            <div class="container">
+                <div class="portofolio-content">
+                   <div class="title">
+                       <h2> my last works</h2>
+                       <a href="#contact" class="btn-down">
+                           <i class="fas fa-chevron-down"></i>
+                       </a>
+                   </div>
+                   <div class="portfolio-grid grid">
+                       <div><img src="ph9.jpg"> </div>
+                        <div><img src="ph10.jpg"> </div>
+                        <div><img src="ph11.jpg"> </div>
+                        <div><img src="ph12.jpg"> </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="typewriting-master/typewriting.js"></script>
+
+</body>
+</html>
